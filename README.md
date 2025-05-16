@@ -1,5 +1,14 @@
 # DevOps
 Cara kerja yang menyatukan tim pembuat aplikasi dan tim pengelola sistem agar bisa bekerja sama lebih baik.
+# 🐳 Apa itu Docker?
+Docker adalah sebuah platform open-source yang digunakan untuk mengembangkan, mengirim, dan menjalankan aplikasi di dalam container. Container adalah unit ringan dan portabel yang mengemas seluruh dependensi aplikasi (termasuk kode, runtime, library, dll) sehingga aplikasi bisa berjalan dengan konsisten di berbagai lingkungan.
+
+# 💻 Cara Install Docker
+   Untuk Windows & macOS:
+   - Kunjungi situs resmi: https://www.docker.com/products/docker-desktop
+   - Unduh dan install Docker Desktop.
+   - Setelah instalasi, jalankan Docker Desktop. Pastikan statusnya running.  
+     
 ## 1. Clone Repository
   Clone repository backend dan frontend ke dalam direkori lokal
    - Backend :  
@@ -7,11 +16,9 @@ Cara kerja yang menyatukan tim pembuat aplikasi dan tim pengelola sistem agar bi
    - Frontend :  
      ```(git clone https://github.com/ghinasafina/PBF-Frontend.git)```
 
-## 2. Bangun dan Jalankan Container
-```docker-compose up --build```  
-
 Tunggu hingga semua container (frontend, backend, nginx) aktif.
-## 3. Dockkerfile Backend (CI4)
+## 2. Dockkerfile Backend (CI4)
+untuk menulis urutan komen yang akan dijalankan saat build container. Command yg ada di docker file berpengaruh terhadap setting dan konfigurasi proyek baik be maupun fe.
 Buat file: ```backend/Dockerfile```
 
 ```FROM php:8.2-fpm
@@ -40,7 +47,8 @@ RUN chown -R www-data:www-data /var/www/writable
 EXPOSE 9001
 CMD ["php-fpm"]
 ```
-## 4. Dockerfile Frontend (Laravel)
+## 3. Dockerfile Frontend (Laravel)
+untuk menulis urutan komen yang akan dijalankan saat build container. Command yg ada di docker file berpengaruh terhadap setting dan konfigurasi proyek baik be maupun fe.
 Buat file: ```frontend/Dockerfile```
 
 ```# Base PHP image
@@ -72,7 +80,8 @@ EXPOSE 9000
 CMD ["php-fpm"]
 ```
 
-## 5. File docker-compose.yml
+## 4. File docker-compose.yml
+merupakan file yang akan dituju ketika kita akan membuild container. Docker compose berisi tentang informasi dan konfigurasi mengenai inti dari hasil dari proyek yg nanti dibuild, misal port utk fe adalah 80:80.
 Buat di root folder (my-project/docker-compose.yml):
 ```
 version: "3.8"
@@ -134,7 +143,8 @@ networks:
     driver: bridge
 ```
 
-## 6. Nginx.conf
+## 5. Nginx.conf
+merupakan file yang berisi konfigurasi server untuk nanti berjalannya proyek.
 ```worker_processes 1;
 
 events {
@@ -172,6 +182,12 @@ http {
     }
 }
 ```
+
+## 5. Build Container
+untuk membangun satu kontainer utuh dan menyatukan semua bagiain proyek (BE, FE, Server, dan database) yang berjalan dalam satu lingkungan.
+
+```docker-compose up --build```
+
 
 
 
