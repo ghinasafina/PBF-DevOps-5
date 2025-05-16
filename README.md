@@ -3,6 +3,16 @@ Cara kerja yang menyatukan tim pembuat aplikasi dan tim pengelola sistem agar bi
 # 🐳 Apa itu Docker?
 Docker adalah sebuah platform open-source yang digunakan untuk mengembangkan, mengirim, dan menjalankan aplikasi di dalam container. Dengan Docker, kalian tidak perlu menginstal semua komponen satu per satu di komputer — cukup jalankan container, dan aplikasinya langsung bisa digunakan. Ini membuat pengembangan dan pengujian aplikasi jadi lebih mudah, cepat, dan konsisten, karena lingkungan kerja di setiap komputer akan selalu sama berkat penggunaan container tersebut.
 
+## Struktur directory
+.  
+├── backend/           # Folder untuk source code backend (misalnya CodeIgniter 4)  
+├── frontend/          # Folder untuk source code frontend (misalnya Laravel)  
+├── mysql-init/        # Berisi skrip inisialisasi database MySQL (seperti file .sql)  
+├── nginx/             # Konfigurasi untuk web server NGINX  
+├── README.md          # Dokumentasi proyek ini  
+└── docker-compose.yml # File konfigurasi Docker Compose untuk menjalankan semua layanan  
+
+
 # 💻 Cara Install Docker
    Untuk Windows & macOS:
    - Kunjungi situs resmi: https://www.docker.com/products/docker-desktop
