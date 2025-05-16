@@ -17,7 +17,7 @@ Docker adalah sebuah platform open-source yang digunakan untuk mengembangkan, me
 │   └── db_pengelolaan_nilai.sql  # File SQL untuk membuat database & tabel awal  
 │  
 ├── nginx/               # Konfigurasi NGINX  
-│   └── default.conf     # (misalnya) konfigurasi reverse proxy  
+│   └── nginx.conf     # (misalnya) konfigurasi reverse proxy  
 │  
 ├── docker-compose.yml   # File utama untuk menjalankan semua container  
 └── README.md            # Dokumentasi proyek  
