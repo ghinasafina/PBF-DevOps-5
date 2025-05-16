@@ -5,12 +5,23 @@ Docker adalah sebuah platform open-source yang digunakan untuk mengembangkan, me
 
 ## Struktur directory
 .  
-├── backend/           # Folder untuk source code backend (misalnya CodeIgniter 4)  
-├── frontend/          # Folder untuk source code frontend (misalnya Laravel)  
-├── mysql-init/        # Berisi skrip inisialisasi database MySQL (seperti file .sql)  
-├── nginx/             # Konfigurasi untuk web server NGINX  
-├── README.md          # Dokumentasi proyek ini  
-└── docker-compose.yml # File konfigurasi Docker Compose untuk menjalankan semua layanan  
+├── backend/             # Folder untuk source code backend (misal: CodeIgniter 4)  
+│   ├── Dockerfile       # File untuk membangun image backend  
+│   └── .env             # File konfigurasi environment backend  
+│  
+├── frontend/            # Folder untuk source code frontend (misal: Laravel)  
+│   ├── Dockerfile       # File untuk membangun image frontend  
+│   └── .env             # File konfigurasi environment frontend  
+│  
+├── mysql-init/          # Inisialisasi awal database MySQL  
+│   └── db_pengelolaan_nilai.sql  # File SQL untuk membuat database & tabel awal  
+│  
+├── nginx/               # Konfigurasi NGINX  
+│   └── default.conf     # (misalnya) konfigurasi reverse proxy  
+│  
+├── docker-compose.yml   # File utama untuk menjalankan semua container  
+└── README.md            # Dokumentasi proyek  
+
 
 
 # 💻 Cara Install Docker
