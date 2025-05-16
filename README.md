@@ -1,13 +1,13 @@
 # DevOps
 Cara kerja yang menyatukan tim pembuat aplikasi dan tim pengelola sistem agar bisa bekerja sama lebih baik.
 # 🐳 Apa itu Docker?
-Docker adalah sebuah platform open-source yang digunakan untuk mengembangkan, mengirim, dan menjalankan aplikasi di dalam container. Container adalah unit ringan dan portabel yang mengemas seluruh dependensi aplikasi (termasuk kode, runtime, library, dll) sehingga aplikasi bisa berjalan dengan konsisten di berbagai lingkungan.
+Docker adalah sebuah platform open-source yang digunakan untuk mengembangkan, mengirim, dan menjalankan aplikasi di dalam container. Dengan Docker, kalian tidak perlu menginstal semua komponen satu per satu di komputer — cukup jalankan container, dan aplikasinya langsung bisa digunakan. Ini membuat pengembangan dan pengujian aplikasi jadi lebih mudah, cepat, dan konsisten, karena lingkungan kerja di setiap komputer akan selalu sama berkat penggunaan container tersebut.
 
 # 💻 Cara Install Docker
    Untuk Windows & macOS:
    - Kunjungi situs resmi: https://www.docker.com/products/docker-desktop
    - Unduh dan install Docker Desktop.
-   - Setelah instalasi, jalankan Docker Desktop. Pastikan statusnya running.  
+   - Setelah instalasi, jalankan Docker Desktop. Pastikan statusnya running. 
      
 ## 1. Clone Repository
   Clone repository backend dan frontend ke dalam direkori lokal
@@ -16,9 +16,9 @@ Docker adalah sebuah platform open-source yang digunakan untuk mengembangkan, me
    - Frontend :  
      ```(git clone https://github.com/ghinasafina/PBF-Frontend.git)```
 
-Tunggu hingga semua container (frontend, backend, nginx) aktif.
+Tunggu hingga semua container (frontend, backend, nginx) aktif.  
 ## 2. Dockkerfile Backend (CI4)
-untuk menulis urutan komen yang akan dijalankan saat build container. Command yg ada di docker file berpengaruh terhadap setting dan konfigurasi proyek baik be maupun fe.
+untuk menulis urutan command yang akan dijalankan saat build container. Command yg ada di docker file berpengaruh terhadap setting dan konfigurasi proyek baik be maupun fe.
 Buat file: ```backend/Dockerfile```
 
 ```FROM php:8.2-fpm
