@@ -100,8 +100,10 @@ EXPOSE 9000
 
 CMD ["php-fpm"]
 ```
+## 4. env
+Fungsi pokok dari file `.env` di Laravel adalah **menyimpan pengaturan lingkungan (environment)** secara terpisah dari kode sumber. File ini memiliki peran penting karena memungkinkan aplikasi Laravel untuk lebih fleksibel dan mudah disesuaikan dengan lingkungan tempat aplikasi dijalankan, seperti local, staging, maupun production.  
 
-## 4. File docker-compose.yml
+## 5. File docker-compose.yml
 merupakan file yang akan dituju ketika kita akan membuild container. Docker compose berisi tentang informasi dan konfigurasi mengenai inti dari hasil dari proyek yg nanti dibuild, misal port utk fe adalah 80:80.
 Buat di root folder (my-project/docker-compose.yml):
 ```
@@ -164,7 +166,7 @@ networks:
     driver: bridge
 ```
 
-## 5. Nginx.conf
+## 6. Nginx.conf
 merupakan file yang berisi konfigurasi server untuk nanti berjalannya proyek.
 ```worker_processes 1;
 
@@ -204,7 +206,7 @@ http {
 }
 ```
 
-## 5. Build Container
+## 7. Build Container
 untuk membangun satu kontainer utuh dan menyatukan semua bagiain proyek (BE, FE, Server, dan database) yang berjalan dalam satu lingkungan.
 
 ```docker-compose up --build```
